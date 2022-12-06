@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 // singular name because all orders will use this single order formula
 // ODM non relational DB
@@ -21,7 +21,9 @@ const OrderSchema = Schema({
     address:{
         type: String,
         required: true,
-    }}, {timestamps: true});
+    }
+
+}, {timestamps: true});
 // this makes things explicit and clean instead of the calling the mongoose.Schema directly
 // we want timestamps to see when the order came in
 
